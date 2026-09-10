@@ -1,0 +1,9 @@
+-- Phase 1: Initialize Database, Schemas, and Warehouse
+CREATE DATABASE WEATHER_DATA_HUB;
+CREATE SCHEMA WEATHER_DATA_HUB.RAW;         -- Landing zone for incoming JSON
+CREATE SCHEMA WEATHER_DATA_HUB.TRANSFORMED; -- Structured analytics tables
+
+CREATE WAREHOUSE QISTARA_WH 
+  WAREHOUSE_SIZE = 'XSMALL' 
+  AUTO_SUSPEND = 60 
+  AUTO_RESUME = TRUE;
